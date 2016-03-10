@@ -25,14 +25,16 @@ html(lang='es')
     .pend { color: #f00; }
   body
     main.wrapper
-      if (report.logo)
-        h1
-          a(href='')
-            img(src='report.logo', alt='')
+      h1
+        a(href='')
+          if (report.logo)
+            img(src=report.logo, alt='')
+          else
+            |My Domain
       table(cellspacing='0', cellpadding='0')
         tr.header
-          td(rowspan='2') SECCIÓN
-          td(colspan='2') INSTANCIA / STATUS
+          td(rowspan='2') SECTION
+          td(colspan='2') STATUS
         tr.header
           td MAQUETACIÓN
           td FRONT-END

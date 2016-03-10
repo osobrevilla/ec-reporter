@@ -1,9 +1,28 @@
 {
-    "logo": "http://domain.com/logo",
+    "logo": "",
+    "proyect": "MySite",
     "views": [{
-      "title": "Portada",
-      "url": "http://domain.com/",
-      "maquetacion": false,
-      "frontend": false
+        "title": "Portada",
+        "url": "http://mysite.com/",
+        "maquetacion": true,
+        "frontend": false
+    },
+    {
+        "title": "Gallery",
+        "url": "http://mysite.com/gallery",
+        "maquetacion": true,
+        "frontend": false
+    },
+    {
+        "title": "Contact",
+        "url": "http://mysite.com/contact",
+        "maquetacion": true,
+        "frontend": false
+    },
+    {
+        "title": "About",
+        "url": "http://mysite.com/about",
+        "maquetacion": true,
+        "frontend": false
     }]
 }
