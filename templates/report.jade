@@ -1,0 +1,43 @@
+doctype html
+html(lang='es')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Reporte
+    link(rel='shortcut icon', href='favicon.ico')
+  style.
+    body { font-size: 12px; font-family: arial; }
+    .wrapper { margin: 0 auto; width: 700px; }
+    h1 { margin: 0 auto; padding: 16px 0 10px; text-align: center; width: 698px; }
+    table { border-collapse: collapse; width: 700px; }
+    table th, table td { border: solid 1px #d5d5d5; padding: 4px; }
+    a { color: #000; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .subitem a { padding-left: 15px; margin-left: 20px; color: #666; background: url("i/bg-list.gif") left no-repeat; }
+    .other { background: #EAEAEA; }
+    .header { background-color: #333; color: #fff; font-size: 15px; font-weight: bold; text-align: center; }
+    .header td { height: 25px; }
+    .row { font-size: 13px; }
+    .row td { height: 25px; text-align: center; }
+    .archivo { padding: 0; text-align: left !important; width: 420px }
+    .archivo a { display: block; font-weight: bold; line-height: 25px; padding: 5px; }
+    .archivo a:hover { background-color: #eee; text-decoration: none; }
+    .ok { color: #00a251; }
+    .pend { color: #f00; }
+  body
+    main.wrapper
+      h1
+        a(href='')
+          img(src='report.logo', alt='')
+      table(cellspacing='0', cellpadding='0')
+        tr.header
+          td(rowspan='2') SECCIÓN
+          td(colspan='2') INSTANCIA / STATUS
+        tr.header
+          td MAQUETACIÓN
+          td FRONT-END
+        each view, index in report.views
+          tr.row
+            td.archivo
+              a(href=view.url, target='_blank') view.title
+            td(class=view.maquetacion ? 'ok' : '') ✓
+            td(class=view.frontend ? 'ok' : '') ✓
