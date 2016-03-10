@@ -1,21 +1,21 @@
 {
-  "name": "frontend-generator-reporter",
+  "name": "frontend-reporter",
   "version": "1.0.0",
-  "description": "Report generator for frontend-generator",
+  "description": "Report generator for frontend-reporter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/osobrevilla/frontend-generator-reporter.git"
+    "url": "git+https://github.com/osobrevilla/frontend-reporter.git"
   },
   "author": "Oscar Sobrevilla",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/osobrevilla/frontend-generator-reporter/issues"
+    "url": "https://github.com/osobrevilla/frontend-reporter/issues"
   },
-  "homepage": "https://github.com/osobrevilla/frontend-generator-reporter#readme",
+  "homepage": "https://github.com/osobrevilla/frontend-reporter#readme",
   "devDependencies": {
     "jade": "^1.11.0"
   }
