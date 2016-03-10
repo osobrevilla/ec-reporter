@@ -2,10 +2,10 @@ var fs = require('fs');
 var jade = require('jade');
 
 module.exports = function(source, destiny) {
-    var sourcePath = source || './report.json';
+    var sourcePath = source || __dirname + '/report.json';
     var destPath = destiny || './report.html';
     var jsonReport = require(sourcePath);
-    var fn = jade.compileFile('./templates/report.jade', {
+    var fn = jade.compileFile(__dirname + '/templates/report.jade', {
       pretty: true
     });
 
