@@ -1,0 +1,9 @@
+{
+    "logo": "http://domain.com/logo",
+    "views": [{
+      "title": "Portada",
+      "url": "http://domain.com/",
+      "maquetacion": false,
+      "frontend": false
+    }]
+}
