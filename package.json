@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/osobrevilla/frontend-reporter#readme",
   "devDependencies": {
+    "commander": "^2.9.0",
     "jade": "^1.11.0"
   }
 }

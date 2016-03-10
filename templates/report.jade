@@ -25,9 +25,10 @@ html(lang='es')
     .pend { color: #f00; }
   body
     main.wrapper
-      h1
-        a(href='')
-          img(src='report.logo', alt='')
+      if (report.logo)
+        h1
+          a(href='')
+            img(src='report.logo', alt='')
       table(cellspacing='0', cellpadding='0')
         tr.header
           td(rowspan='2') SECCIÓN
@@ -38,6 +39,7 @@ html(lang='es')
         each view, index in report.views
           tr.row
             td.archivo
-              a(href=view.url, target='_blank') view.title
-            td(class=view.maquetacion ? 'ok' : '') ✓
-            td(class=view.frontend ? 'ok' : '') ✓
+              a(href=view.url, target='_blank')= view.title
+            td(class=view.maquetacion ? 'ok' : 'pend') ✓ 
+            td(class=view.frontend ? 'ok' : 'pend') ✓
+        

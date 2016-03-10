@@ -1,11 +1,25 @@
-var jade = require("jade");
-var jsonReport = require('../../report.json');
+var fs = require('fs');
+var program = require('commander');
+var jade = require('jade');
+var pkg = require('./package.json');
+var version = pkg.version;
+
+program
+    .version(version)
+    .usage('[options] [file]')
+    .parse(process.argv);
+
+var sourcePath = program.args.shift() || './report.json';
+var jsonReport = require(sourcePath);
+
 var fn = jade.compileFile('./templates/report.jade', {
   pretty: true
 });
 
 // Render the function
-var html = fn(jsonReport);
+var html = fn({
+  report: jsonReport
+});
 
 write('./report.html', html);
 
