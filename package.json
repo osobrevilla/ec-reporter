@@ -16,7 +16,7 @@
     "url": "https://github.com/osobrevilla/frontend-reporter/issues"
   },
   "homepage": "https://github.com/osobrevilla/frontend-reporter#readme",
-  "devDependencies": {
+  "dependences": {
     "jade": "^1.11.0"
   }
 }
