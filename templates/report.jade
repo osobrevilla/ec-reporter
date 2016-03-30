@@ -2,7 +2,7 @@ doctype html
 html(lang='es')
   head
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-    title Reporte
+    title Reporte de proyecto: #{title}
     link(rel='shortcut icon', href='favicon.ico')
   style.
     body { font-size: 12px; font-family: arial; }
@@ -26,11 +26,11 @@ html(lang='es')
   body
     main.wrapper
       h1
-        a(href='')
-          if (report.logo)
-            img(src=report.logo, alt='')
+        a(href='/')
+          if (logo)
+            img(src=logo, alt='')
           else
-            |My Domain
+          |Reporte de proyecto: #{title}
       table(cellspacing='0', cellpadding='0')
         tr.header
           td(rowspan='2') SECTION
@@ -38,10 +38,10 @@ html(lang='es')
         tr.header
           td MAQUETACIÓN
           td FRONT-END
-        each view, index in report.views
+        each view, index in views
           tr.row
             td.archivo
-              a(href=view.url, target='_blank')= view.title
-            td(class=view.maquetacion ? 'ok' : 'pend') ✓ 
-            td(class=view.frontend ? 'ok' : 'pend') ✓
-        
+              a(href=view.slug, target='_blank')= view.title
+            td(class=view.markup.toLowerCase() === 'yes' ? 'ok' : 'pend') ✓
+            td(class=view.interaction.toLowerCase() === 'yes' ? 'ok' : 'pend') ✓
+
