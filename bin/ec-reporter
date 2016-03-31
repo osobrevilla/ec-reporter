@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+var program = require('commander');
+var reporter = require('../index');
+
+program
+  .version('0.0.1')
+  .option('-s, --source', 'Source')
+  .option('-d, --dest', 'Dest')
+  .parse(process.argv);
+
+
+reporter(program.source, program.dest);
